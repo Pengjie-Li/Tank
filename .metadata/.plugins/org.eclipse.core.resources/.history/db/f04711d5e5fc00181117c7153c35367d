@@ -1,0 +1,14 @@
+package com.mytank1;
+
+public class mytank1 {
+
+	public mytank1() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		DrawTank dt=new DrawTank();
+	}
+
+}

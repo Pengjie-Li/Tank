@@ -1,0 +1,14 @@
+package com.mytank1;
+
+public class Movable_Points {
+
+	public Movable_Points() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

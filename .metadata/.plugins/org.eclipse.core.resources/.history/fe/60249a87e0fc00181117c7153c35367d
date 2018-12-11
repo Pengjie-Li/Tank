@@ -1,0 +1,54 @@
+package com.mytank1;
+
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Movable_Point extends JFrame implements ActionListener{
+
+	JPanel jp=null;
+	public Movable_Point() {
+	
+		// TODO Auto-generated constructor stub
+
+		// define 
+		jp=new MyPanel(10,10);
+		// add 
+		this.add(jp);
+		
+		this.setSize(400, 300);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Movable_Point mp=new Movable_Point();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+class MyPanel extends JPanel{
+	int x;
+	int y;
+	public MyPanel(int x,int y) {
+		this.x=x;
+		this.y=y;
+	}
+	public void paint(Graphics g) {
+		super.paint(g);
+		g.fillOval(x, y, 10, 10);
+		
+	}
+}

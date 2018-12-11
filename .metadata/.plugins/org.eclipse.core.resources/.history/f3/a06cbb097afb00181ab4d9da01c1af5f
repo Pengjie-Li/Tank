@@ -1,0 +1,31 @@
+package com.mytank1;
+import java.awt.*;
+import javax.swing.*;
+
+public class Event_Monitor extends JFrame{
+	
+	JPanel jp=null;
+	JButton jb1=null;
+	JButton jb2=null;
+	
+	public Event_Monitor() {
+		// TODO Auto-generated constructor stub
+		jp=new JPanel();
+		jb1=new JButton();
+		jb2=new JButton();
+		
+		this.add(jp);
+		this.add(jb1);
+		this.add(jb2);
+		
+		this.setSize(400,300);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
