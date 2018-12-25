@@ -1,0 +1,87 @@
+package com.mytank1;
+
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Movable_Point extends JFrame implements ActionListener{
+
+	JPanel jp=null;
+	public Movable_Point() {
+	
+		// TODO Auto-generated constructor stub
+
+		// define 
+		jp=new MyPanel2(10,10);
+		// add 
+		this.add(jp);
+		//add monitor
+		this.addKeyListener((KeyListener) jp);
+		this.setSize(400, 300);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Movable_Point mp=new Movable_Point();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+class MyPanel2 extends JPanel implements KeyListener{
+	int x;
+	int y;
+	public MyPanel2(int x,int y) {
+		this.x=x;
+		this.y=y;
+	}
+	public void paint(Graphics g) {
+		super.paint(g);
+		g.fillOval(x, y, 10, 10);
+		
+	}
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		System.out.println("输出键值"+(char)e.getKeyChar());
+		//System.out.println("游泳");
+		if(e.getKeyCode()==KeyEvent.VK_DOWN){
+			y++;
+		}
+		if(e.getKeyCode()==KeyEvent.VK_UP){
+			y--;
+		}
+		
+		if(e.getKeyCode()==KeyEvent.VK_LEFT){
+			x--;
+		}
+		if(e.getKeyCode()==KeyEvent.VK_RIGHT){
+			x++;
+		}
+		this.repaint();
+	}
+	@Override
+	public void keyReleased(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void keyTyped(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+}
